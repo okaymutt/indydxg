@@ -15,19 +15,19 @@ const releases = [
     tracks: [
       {
         title: "stack more, talk less.",
-        src: "music/stackmore.mp3",
+        src: "music/12 mutts/stackmore.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "total skorn.",
-        src: "music/totalskornsong.mp3",
+        src: "music/12 mutts/totalskornsong.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "clairvoyant..",
-        src: "music/clairvoyantsong.mp3",
+        src: "music/12 mutts/clairvoyantsong.mp3",
         format: "MP3",
         durationNote: ""
       }
