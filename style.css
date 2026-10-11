@@ -1328,8 +1328,8 @@ footer a:hover {
 #visualizer-gif,
 #visualizer-cover {
   position: absolute;
-  width: 70% !important;
-  height: 70% !important;
+  width: 85% !important;
+  height: 85% !important;
   inset: 0;
   margin: auto;
   object-fit: contain !important;
