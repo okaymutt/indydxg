@@ -1335,3 +1335,14 @@ footer a:hover {
   object-fit: contain !important;
   padding: 0;
 }
+
+.window,
+.player-window {
+  background: linear-gradient(
+    180deg,
+    #e6e8eb 0%,
+    #c8cdd3 45%,
+    #a6adb5 100%
+  );
+  border-color: #727b86;
+}
