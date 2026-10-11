@@ -71,7 +71,7 @@ input[type="range"] { accent-color: var(--white); min-width: 0; cursor: pointer;
 .section-heading > span { color: var(--grey); font-size: 10px; }
 .release-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; padding: 0 16px 18px; }
 .release { min-width: 0; padding: 12px; border: 1px dashed var(--line); background: #080808; }
-.release-cover { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 11px; border: 1px solid #777; filter: grayscale(1); background: #111; }
+.release-cover { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 11px; border: 1px solid #777; background: #111; }
 .cover-placeholder { display: grid; place-items: center; color: var(--white); font-size: 24px; background: repeating-linear-gradient(135deg,#090909 0 7px,#222 7px 8px); }
 .release-type { color: var(--grey); font-size: 9px; letter-spacing: .08em; text-transform: lowercase; }
 .release h3 { margin: 5px 0 2px; font-size: 14px; font-weight: 400; overflow-wrap: anywhere; }
