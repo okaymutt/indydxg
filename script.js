@@ -87,7 +87,7 @@ const releases = [
       },    
       {
         title: "the world doesn't care.",
-        src: "music/the%20world%20doesn't%20care/the%20world%doesn't%20care.mp3",
+        src: "music/the%20world%20doesn't%20care/the%20world%20doesn't%20care.mp3",
         format: "MP3",
         durationNote: ""
       },
@@ -120,7 +120,9 @@ const releases = [
         src: "music/the%20world%20doesn't%20care/the%20myth%20of%20sisyphus.mp3",
         format: "MP3",
         durationNote: ""
-      }      
+      } 
+    ]
+  },
   
   {
     title: "12 mutts",
