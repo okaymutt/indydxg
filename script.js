@@ -7,6 +7,121 @@
 */
 
 const releases = [
+   {
+    title: "the world doesn't care",
+    type: "ALBUM",
+    year: "2025",
+    cover: "coverarts/twdc.png",
+    tracks: [
+      {
+        title: "i wish...",
+        src: "music/the%20world%20doesn't%20care/i%20wish.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "what a drag.",
+        src: "music/the%20world%20doesn't%20care/what%20a%20drag.mp3",
+        format: "MP3",
+        durationNote: ""
+      },      
+      {
+        title: "dear diary.",
+        src: "music/the%20world%20doesn't%20care/dear%20diary.mp3",
+        format: "MP3",
+        durationNote: ""
+      }, 
+      {
+        title: "rule the world.",
+        src: "music/the%20world%20doesn't%20care/rule%20the%20world.mp3",
+        format: "MP3",
+        durationNote: ""
+      },      
+      {
+        title: "infinity.",
+        src: "music/the%20world%20doesn't%20care/infinity.mp3",
+        format: "MP3",
+        durationNote: ""
+      },   
+      {
+        title: "immortal.",
+        src: "music/the%20world%20doesn't%20care/immortal.mp3",
+        format: "MP3",
+        durationNote: ""
+      },      
+       {
+        title: "wicked.",
+        src: "music/the%20world%20doesn't%20care/wicked.mp3",
+        format: "MP3",
+        durationNote: ""
+      },   
+        {
+        title: "borne of loam.",
+        src: "music/the%20world%20doesn't%20care/borne%20of%20loam.mp3",
+        format: "MP3",
+        durationNote: ""
+      },    
+      {
+        title: "chow o' clock.",
+        src: "music/the%20world%20doesn't%20care/chow%20o'%20clock.mp3",
+        format: "MP3",
+        durationNote: ""
+      },    
+      {
+        title: "newfoundland.",
+        src: "music/the%20world%20doesn't%20care/newfoundland.mp3",
+        format: "MP3",
+        durationNote: ""
+      },    
+      {
+        title: "how they judge.",
+        src: "music/the%20world%20doesn't%20care/how%20they%20judge.mp3",
+        format: "MP3",
+        durationNote: ""
+      },      
+      {
+        title: "superstar.",
+        src: "music/the%20world%20doesn't%20care/superstar.mp3",
+        format: "MP3",
+        durationNote: ""
+      },    
+      {
+        title: "the world doesn't care.",
+        src: "music/the%20world%20doesn't%20care/the%20world%doesn't%20care.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+       {
+        title: "silent hill.",
+        src: "music/the%20world%20doesn't%20care/silent%20hill.mp3",
+        format: "MP3",
+        durationNote: ""
+      },     
+      {
+        title: "puer aeternus.",
+        src: "music/the%20world%20doesn't%20care/puer%20aeternus.mp3",
+        format: "MP3",
+        durationNote: ""
+      },  
+       {
+        title: "don't look at me.",
+        src: "music/the%20world%20doesn't%20care/don't%20look%20at%20me.mp3",
+        format: "MP3",
+        durationNote: ""
+      },    
+       {
+        title: "the world is ours.",
+        src: "music/the%20world%20doesn't%20care/the%20world%20is%20ours.mp3",
+        format: "MP3",
+        durationNote: ""
+      },   
+      {
+        title: "the myth of sisyphus.",
+        src: "music/the%20world%20doesn't%20care/the%20myth%20of%20sisyphus.mp3",
+        format: "MP3",
+        durationNote: ""
+      }      
+  
   {
     title: "12 mutts",
     type: "EP",
@@ -26,11 +141,12 @@ const releases = [
         durationNote: ""
       },
       {
-        title: "clairvoyant..",
+        title: "clairvoyant.",
         src: "music/12%20mutts/clairvoyantsong.mp3",
         format: "MP3",
         durationNote: ""
       }
+
     ]
   }
 ];
