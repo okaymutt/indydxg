@@ -7,20 +7,26 @@
 */
 const releases = [
   {
-    title: "YOUR RELEASE TITLE",
-    type: "EP / ALBUM / SINGLE",
-    year: "2026",
+    title: "12 mutts",
+    type: "EP",
+    year: "2024",
     cover: "", // Example: "covers/your-cover.jpg"
     tracks: [
       {
-        title: "Track One",
-        src: "music/track-one.mp3",
+        title: "stack more, talk less.",
+        src: "music/stackmore.mp3",
         format: "MP3",
         durationNote: "Replace with your track"
       },
       {
-        title: "Track Two",
-        src: "music/track-two.mp3",
+        title: "total skorn.",
+        src: "music/totalskornsong.mp3",
+        format: "MP3",
+        durationNote: "Replace with your track"
+      }
+      {
+        title: "clairvoyant..",
+        src: "music/clairvoyantsong.mp3",
         format: "MP3",
         durationNote: "Replace with your track"
       }
