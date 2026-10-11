@@ -1336,13 +1336,89 @@ footer a:hover {
   padding: 0;
 }
 
-.window,
-.player-window {
+
+/* =========================================
+   INDYDXG // SILVER FRUTIGER AERO FINISH
+   ========================================= */
+
+/* Outer window: glossy silver glass frame */
+.app-frame {
   background: linear-gradient(
     180deg,
-    #e6e8eb 0%,
-    #c8cdd3 45%,
-    #a6adb5 100%
+    #f7f8fa 0%,
+    #bfc5cc 12%,
+    #858e98 45%,
+    #626b75 52%,
+    #cbd0d6 100%
   );
-  border-color: #727b86;
+  border: 1px solid #737e89;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 0 0 1px rgba(255,255,255,.25),
+    0 0 0 1px rgba(255,255,255,.25),
+    0 0 18px rgba(210,220,230,.15),
+    0 18px 45px rgba(0,0,0,.65);
 }
+
+/* Window title bar: glossy silver-gray */
+.titlebar {
+  background: linear-gradient(
+    180deg,
+    #fdfdfd 0%,
+    #d9dde1 12%,
+    #929ba4 45%,
+    #626a73 52%,
+    #aeb6be 100%
+  );
+  border-bottom: 1px solid #555e67;
+  color: #fff;
+  text-shadow: 0 1px 3px #333;
+}
+
+/* Main player interior: cool silver gradient */
+.player-shell {
+  background: linear-gradient(
+    180deg,
+    #e9ecef 0%,
+    #d5d9de 48%,
+    #b8bec5 100%
+  );
+}
+
+/* Content pane: neutral gray instead of beige */
+.main-pane {
+  background: linear-gradient(
+    180deg,
+    #f0f1f3 0%,
+    #dedfe2 55%,
+    #c9cdd2 100%
+  );
+}
+
+/* Menu strip: silver glass */
+.menu-bar {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eceef0 45%,
+    #cbd0d5 100%
+  );
+  border-bottom-color: #a5abb2;
+}
+
+.window-buttons i,
+.window-buttons i:last-child {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #d9dfe5 35%,
+    #858f99 55%,
+    #c4cbd2 100%
+  );
+  border-color: #f8f8f8;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    0 1px 2px rgba(0,0,0,.25);
+}
+
