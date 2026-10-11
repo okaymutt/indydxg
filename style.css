@@ -1275,3 +1275,51 @@ footer a {
 footer a:hover {
   color: #aaa;
 }
+
+
+.visualizer {
+  position: relative;
+  height: 225px;
+  min-width: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.visualizer > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visualizer > img[hidden] {
+  display: none;
+}
+
+.visualizer-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 5px #000;
+  pointer-events: none;
+}
+
+.visualizer-overlay span {
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.visualizer-overlay small {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
