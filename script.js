@@ -47,6 +47,8 @@ const nowDetail = document.getElementById("now-detail");
 const playerState = document.getElementById("player-state");
 const formatLabel = document.getElementById("format-label");
 const releaseList = document.getElementById("release-list");
+const visualizerGif = document.getElementById("visualizer-gif");
+const visualizerCover = document.getElementById("visualizer-cover");
 let activeButton = null;
 
 function timeLabel(seconds) {
@@ -68,6 +70,14 @@ function playTrack(track, release, button) {
   activeButton = button;
   if (activeButton) activeButton.setAttribute("aria-current", "true");
   audio.src = track.src;
+  if (release.cover) {
+  visualizerCover.src = release.cover;
+  visualizerCover.hidden = false;
+  visualizerGif.hidden = true;
+} else {
+  visualizerCover.hidden = true;
+  visualizerGif.hidden = false;
+}
   audio.load();
   nowTitle.textContent = track.title;
   nowRelease.textContent = release.title;
