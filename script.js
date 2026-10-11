@@ -15,7 +15,7 @@ const releases = [
     tracks: [
       {
         title: "stack more, talk less.",
-        src: "music/12 mutts/stackmore.mp3",
+        src: "music/12_mutts/stackmore.mp3",
         format: "MP3",
         durationNote: ""
       },
