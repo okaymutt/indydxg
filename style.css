@@ -1124,3 +1124,154 @@ input:focus-visible {
   outline-color: #555;
 }
 
+
+/* INDYDXG // TRUE BLACK & WHITE UI
+   Album artwork stays in full color. */
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, #404040 0%, transparent 65%),
+    linear-gradient(135deg, #050505 0%, #242424 52%, #080808 100%);
+}
+
+/* Window frame: glossy grayscale Aero */
+.titlebar {
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #cfcfcf 15%,
+    #666 48%,
+    #292929 52%,
+    #777 100%
+  );
+  color: #fff;
+  text-shadow: 0 1px 2px #000;
+}
+
+.window-buttons i,
+.window-buttons i:last-child {
+  background: linear-gradient(#eee, #777 48%, #333);
+  border-color: #fff;
+}
+
+/* All interface surfaces: white, silver, or black */
+.menu-bar,
+.modebar,
+.mode-select,
+.now-info-heading,
+.track-strip,
+.library-heading,
+.control-deck {
+  background: linear-gradient(#fff, #d0d0d0);
+  color: #111;
+}
+
+.mode-orb,
+.transport-button,
+.play-button {
+  background: linear-gradient(#fff, #bbb 50%, #888);
+  color: #111;
+  border-color: #666;
+}
+
+.sidebar,
+.player-shell {
+  background: linear-gradient(90deg, #f4f4f4, #c9c9c9);
+}
+
+.sidebar a,
+.sidebar a.selected,
+.sidebar a:hover {
+  color: #111;
+  background: linear-gradient(#fff, #d0d0d0);
+  border-color: #999;
+}
+
+.eyebrow,
+.player-status,
+.release-type,
+.release-side,
+.library-subhead,
+#release-count {
+  color: #555;
+}
+
+.track-meta h1,
+.release h3 {
+  color: #111;
+}
+
+.track-meta p,
+.release p {
+  color: #555;
+}
+
+/* Player display stays black, with white lettering */
+.visualizer {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255,255,255,.04) 4px
+    ),
+    radial-gradient(ellipse at center, #333, #000 75%);
+}
+
+.visualizer span {
+  color: #fff;
+  text-shadow: 0 0 12px rgba(255,255,255,.35);
+}
+
+.visualizer small {
+  color: #ccc;
+}
+
+/* Release list */
+.library-subhead,
+.edit-note {
+  background: #e5e5e5;
+  color: #444;
+}
+
+.release,
+.release:nth-child(even) {
+  background: #fff;
+}
+
+.release:hover {
+  background: #eee;
+}
+
+.track-button {
+  background: linear-gradient(#fff, #e5e5e5);
+  color: #111;
+  border-color: #bbb;
+}
+
+.track-button:hover,
+.track-button:focus-visible,
+.track-button[aria-current="true"] {
+  background: linear-gradient(#e8e8e8, #c4c4c4);
+  color: #000;
+  border-color: #777;
+}
+
+/* Keep album artwork untouched and in full color */
+.release-cover {
+  filter: none;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  color: #ddd;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #aaa;
+}
