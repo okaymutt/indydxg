@@ -290,11 +290,7 @@ audio.addEventListener("timeupdate", () => {
     seek.value = String(Math.round((audio.currentTime / audio.duration) * 1000));
   }
 });
-audio.addEventListener("ended", () => {
-  playButton.textContent = "▶";
-  playerState.textContent = "TRACK ENDED";
-  seek.value = "0";
-});
+
 audio.addEventListener("error", () => {
   playerState.textContent = "AUDIO FILE NOT FOUND";
   nowDetail.textContent = "Check the file name and path in script.js.";
@@ -324,10 +320,12 @@ audio.addEventListener("ended", () => {
   if (nextIndex < currentRelease.tracks.length) {
     const nextTrack = currentRelease.tracks[nextIndex];
 
-    const nextButton = activeButton
-      ?.parentElement
-      ?.querySelectorAll(".track-button")[nextIndex];
-
+    const trackButtons = activeButton
+      ?.closest(".release")
+      ?.querySelectorAll(".track-button");
+    
+    const nextButton = trackButtons?.[nextIndex];
+    
     if (nextButton) {
       playTrack(nextTrack, currentRelease, nextButton);
     } else {
