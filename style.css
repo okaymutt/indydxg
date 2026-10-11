@@ -1325,3 +1325,8 @@ footer a:hover {
   text-transform: uppercase;
 }
 
+#visualizer-gif {
+  object-fit: contain;
+  padding: 12px;
+  box-sizing: border-box;
+}
