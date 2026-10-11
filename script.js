@@ -50,6 +50,8 @@ const releaseList = document.getElementById("release-list");
 const visualizerGif = document.getElementById("visualizer-gif");
 const visualizerCover = document.getElementById("visualizer-cover");
 let activeButton = null;
+let currentRelease = null;
+let currentTrackIndex = -1;
 
 function timeLabel(seconds) {
   if (!Number.isFinite(seconds) || seconds < 0) return "00:00";
@@ -66,6 +68,10 @@ function playTrack(track, release, button) {
     nowDetail.textContent = `Put the audio file in music/ and update its src in script.js.`;
     return;
   }
+  
+  currentRelease = release;
+  currentTrackIndex = release.tracks.indexOf(track);
+  
   if (activeButton) activeButton.removeAttribute("aria-current");
   activeButton = button;
   if (activeButton) activeButton.setAttribute("aria-current", "true");
@@ -184,3 +190,35 @@ volume.addEventListener("input", () => { audio.volume = Number(volume.value); })
 audio.volume = Number(volume.value);
 document.getElementById("year").textContent = new Date().getFullYear();
 renderReleases();
+
+audio.addEventListener("ended", () => {
+  seek.value = "0";
+  currentTimeEl.textContent = "00:00";
+
+  if (!currentRelease || currentTrackIndex < 0) {
+    playButton.textContent = "▶";
+    playerState.textContent = "TRACK ENDED";
+    return;
+  }
+
+  const nextIndex = currentTrackIndex + 1;
+
+  if (nextIndex < currentRelease.tracks.length) {
+    const nextTrack = currentRelease.tracks[nextIndex];
+
+    const nextButton = activeButton
+      ?.parentElement
+      ?.querySelectorAll(".track-button")[nextIndex];
+
+    if (nextButton) {
+      playTrack(nextTrack, currentRelease, nextButton);
+    } else {
+      playButton.textContent = "▶";
+      playerState.textContent = "TRACK ENDED";
+    }
+  } else {
+    playButton.textContent = "▶";
+    playerState.textContent = "ALBUM COMPLETE";
+    currentTrackIndex = -1;
+  }
+});
