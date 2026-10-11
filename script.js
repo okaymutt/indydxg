@@ -5,30 +5,31 @@
   - Example: src: "music/my-track.mp3"
   - Do not add private demos, unreleased tracks, or WAV masters to this public website.
 */
+
 const releases = [
   {
     title: "12 mutts",
     type: "EP",
     year: "2024",
-    cover: "", // Example: "covers/your-cover.jpg"
+    cover: "",
     tracks: [
       {
         title: "stack more, talk less.",
         src: "music/stackmore.mp3",
         format: "MP3",
-        durationNote: "Replace with your track"
+        durationNote: ""
       },
       {
         title: "total skorn.",
         src: "music/totalskornsong.mp3",
         format: "MP3",
-        durationNote: "Replace with your track"
-      }
+        durationNote: ""
+      },
       {
         title: "clairvoyant..",
         src: "music/clairvoyantsong.mp3",
         format: "MP3",
-        durationNote: "Replace with your track"
+        durationNote: ""
       }
     ]
   }
