@@ -11,7 +11,7 @@ const releases = [
     title: "12 mutts",
     type: "EP",
     year: "2024",
-    cover: "",
+    cover: "coverarts/dogforever%20cover.png",
     tracks: [
       {
         title: "stack more, talk less.",
