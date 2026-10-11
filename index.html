@@ -3,97 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="indydxg — releases, tracks, and archive.">
-  <title>indydxg // music archive</title>
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="indydxg music archive — releases, tracks, and sounds.">
+  <title>tunes! — indydxg</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="scanlines" aria-hidden="true"></div>
+<body id="top">
+  <div class="starfield" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="wordmark" href="#" aria-label="indydxg home">indy<span>dxg</span><b>®</b></a>
-    <nav aria-label="Main navigation">
-      <a href="#releases">RELEASES</a>
-      <a href="#about">INFO</a>
-      <a href="#links">LINKS</a>
-    </nav>
-    <span class="status"><i></i> ARCHIVE ONLINE</span>
+    <a href="#top">//hxme!</a>
+    <a class="active" href="#releases" aria-current="page">//tunes!</a>
+    <a href="#about">//prxjects!</a>
+    <a href="#links">//archive!</a>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-kicker">INDEPENDENT MUSIC / HOUSTON, TX</div>
-      <h1>INDY<span>DXG</span></h1>
-      <div class="hero-bottom">
-        <p>LOUD THOUGHTS. LOW SIGNAL.<br>NO FIXED ADDRESS.</p>
-        <div class="hero-stamp">ID—001<br><span>EST. UNKNOWN</span></div>
-      </div>
-    </section>
-
-    <section class="player-panel" aria-label="Audio player">
-      <div class="panel-heading"><span>01 / NOW PLAYING</span><span id="player-state">PLAYER STANDBY</span></div>
+    <section class="window player-window" aria-label="Audio player">
+      <div class="window-title"><span>lykxs media player X</span><span aria-hidden="true">×</span></div>
       <div class="player-main">
         <div class="mini-cover" id="mini-cover" aria-hidden="true"><span>INDY<br>DXG</span></div>
         <div class="track-meta">
-          <div class="eyebrow" id="now-release">SELECT A TRACK</div>
-          <h2 id="now-title">NOTHING PLAYING</h2>
-          <p id="now-detail">Choose a released track below.</p>
+          <div class="eyebrow" id="now-release">INDYDXG // AUDIX</div>
+          <h1 id="now-title">chxxse a sxng!</h1>
+          <p id="now-detail">pick something from the archive below</p>
         </div>
-        <div class="transport">
-          <button id="play-button" class="play-button" type="button" aria-label="Play or pause" disabled>▶</button>
-        </div>
+        <div class="player-status" id="player-state">PLAYER STANDBY</div>
       </div>
       <div class="timeline">
         <span id="current-time">00:00</span>
         <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek through track" disabled>
         <span id="duration">00:00</span>
       </div>
-      <div class="player-footer">
+      <div class="transport">
         <span id="format-label">MP3 / WAV</span>
-        <label class="volume-label" for="volume">VOL</label>
+        <button id="play-button" type="button" aria-label="Play or pause" disabled>play</button>
+        <label for="volume">vol</label>
         <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
       </div>
       <audio id="audio" preload="metadata"></audio>
     </section>
 
-    <section id="releases" class="section">
+    <section id="releases" class="window music-window">
+      <div class="window-title"><span>tunes X</span><a href="#top" aria-label="Back to top">×</a></div>
+      <div class="intro">
+        <p>welcxme tx the music page! here u can listen tx my releases, all in one place.</p>
+        <p>fxr the newest tunes, check xut my <a href="https://bandcamp.com/">bandcamp!</a></p>
+      </div>
       <div class="section-heading">
-        <div><span class="eyebrow">02 / DISCOGRAPHY</span><h2>RELEASES<span class="period">.</span></h2></div>
-        <span class="count" id="release-count">01—00</span>
+        <h2>releases</h2><span id="release-count">01—00</span>
       </div>
       <div id="release-list" class="release-list"></div>
-      <p class="edit-note">Tracks shown here are public releases only. Add only audio you have the right to publish.</p>
+      <p class="edit-note">public releases only · thanks for listening</p>
     </section>
 
-    <section id="about" class="info-grid">
-      <div class="info-card">
-        <span class="eyebrow">03 / ABOUT</span>
-        <h2>THIS IS THE<br>PUBLIC SIDE.</h2>
-        <p>A stripped-down index of released work by indydxg. No feed to chase. No algorithm to please. Just the music.</p>
-      </div>
-      <div class="info-card">
-        <span class="eyebrow">04 / ARCHIVE NOTE</span>
-        <h2>KEEP THE<br>MASTERS SAFE.</h2>
-        <p>This site is for public listening. Keep WAV masters, private demos, and unreleased work in a separate private archive and an offline backup.</p>
-      </div>
+    <section id="about" class="about-strip">
+      <span>INDYDXG // AUDIX</span>
+      <span>ALL TRACKS PLAY HERE</span>
+      <span>© <span id="year"></span></span>
     </section>
 
-    <section id="links" class="links-section">
-      <div class="section-heading"><div><span class="eyebrow">05 / ELSEWHERE</span><h2>LINKS<span class="period">.</span></h2></div></div>
-      <div class="link-row">
-        <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">SOUNDCLOUD <span>↗</span></a>
-        <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">BANDCAMP <span>↗</span></a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GITHUB <span>↗</span></a>
-      </div>
-      <p class="edit-note">Replace these placeholder links with your own artist profiles, or remove any you don't use.</p>
+    <section id="links" class="links-row" aria-label="Links">
+      <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">soundcloud ↗</a>
+      <a href="https://bandcamp.com/" target="_blank" rel="noopener noreferrer">bandcamp ↗</a>
+      <a href="https://github.com/okaymutt/indydxg" target="_blank" rel="noopener noreferrer">archive ↗</a>
     </section>
   </main>
-
-  <footer>
-    <span>© <span id="year"></span> INDYDXG</span>
-    <span>BUILT TO STAY SMALL.</span>
-    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">BACK TO TOP ↑</a>
-  </footer>
   <script src="script.js"></script>
 </body>
 </html>
