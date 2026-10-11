@@ -30,7 +30,15 @@
 
         <div class="main-pane">
           <section class="now-playing" aria-label="Audio player">
-            <div class="visualizer" aria-hidden="true"><span>INDYDXG</span><small>nxw playing</small></div>
+
+          <div class="visualizer" id="visualizer">
+            <img id="visualizer-gif" src="images/idle.gif" alt="">
+            <img id="visualizer-cover" alt="" hidden>
+            <div class="visualizer-overlay">
+              <span>INDYDXG</span>
+              <small id="visualizer-caption">nxw playing</small>
+            </div>
+          </div>
             <aside class="now-info">
               <div class="now-info-heading">Nxw Playing</div>
               <div class="mini-cover" id="mini-cover" aria-hidden="true"><span>INDY<br>DXG</span></div>
