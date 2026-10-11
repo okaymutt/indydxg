@@ -7,6 +7,119 @@
 */
 
 const releases = [
+
+  {
+    title: "one world",
+    type: "ALBUM",
+    year: "2025",
+    cover: "coverarts/oneworld%20art%20new.png",
+    tracks: [
+      {
+        title: "dog forever.",
+        src: "music/one%20world%20/dogforever.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "openursoul.",
+        src: "music/one%20world%20/openursoul.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "hiroyuki.",
+        src: "music/one%20world%20/hiroyuki.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "guardian.",
+        src: "music/one%20world%20/guardian.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "snoopy.",
+        src: "music/one%20world%20/snoopy.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "jumptrap.",
+        src: "music/one%20world%20/jumptrap.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "narcissist.",
+        src: "music/one%20world%20/narcissist.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "into hiraeth.",
+        src: "music/one%20world%20/intohiraeth.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "dieforglory.",
+        src: "music/one%20world%20/dieforglory.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "pupstar.",
+        src: "music/one%20world%20/pupstar.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "regular show.",
+        src: "music/one%20world%20/regularshow.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "ghostface.",
+        src: "music/one%20world%20/ghostface.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "darkfantasy.",
+        src: "music/one%20world%20/darkfantasy.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "novaturient.",
+        src: "music/one%20world%20/novaturient.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "one chance.",
+        src: "music/one%20world%20/onechance.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "one life.",
+        src: "music/one%20world%20/onelife.wav",
+        format: "WAV",
+        durationNote: ""
+      },
+      {
+        title: "one world.",
+        src: "music/one%20world%20/oneworld.wav",
+        format: "WAV",
+        durationNote: ""
+      }
+    ]
+  },
+
+  
    {
     title: "the world doesn't care",
     type: "ALBUM",
