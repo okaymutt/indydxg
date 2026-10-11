@@ -1325,8 +1325,13 @@ footer a:hover {
   text-transform: uppercase;
 }
 
-#visualizer-gif {
-  object-fit: contain;
-  padding: 12px;
-  box-sizing: border-box;
+#visualizer-gif,
+#visualizer-cover {
+  position: absolute;
+  width: 70% !important;
+  height: 70% !important;
+  inset: 0;
+  margin: auto;
+  object-fit: contain !important;
+  padding: 0;
 }
