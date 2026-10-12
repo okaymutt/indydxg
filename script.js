@@ -528,7 +528,7 @@ renderReleases();
 alert(
   "Releases: " + releases.length +
   "\nRendered albums: " + releaseList.children.length
-);
+});
 
 audio.addEventListener("ended", () => {
   seek.value = "0";
