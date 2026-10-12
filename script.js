@@ -9,6 +9,57 @@
 const releases = [
 
   {
+    title: "clearly brxken",
+    type: "ALBUM",
+    year: "2025",
+    cover: "coverarts/clearly%20brxken%20art.png",
+    tracks: [
+      {
+        title: "wanna eat pexple?",
+        src: "music/brxken/wanna%20eat%20people.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "lxrd xf the dxgs.",
+        src: "music/brxken/lord%20of%20the%20dogs.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "nightmare eyes.",
+        src: "music/brxken/charlie.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "jake the dxg.",
+        src: "music/brxken/jake%20the%20dog%20new.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "the hxund xf hades.",
+        src: "music/brxken/hound%20of%20hades.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "bxnes.",
+        src: "music/brxken/mysuicide.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "heaven fire.",
+        src: "music/brxken/heaven%20fire%20new.mp3",
+        format: "MP3",
+        durationNote: ""
+      }
+    ]
+  },
+  
+  {
     title: "one world",
     type: "ALBUM",
     year: "2025",
