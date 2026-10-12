@@ -284,6 +284,94 @@ let activeButton = null;
 let currentRelease = null;
 let currentTrackIndex = -1;
 
+
+/* ANDROID LOCK-SCREEN MEDIA CONTROLS */
+
+function updateMediaSession(track, release) {
+  if (!("mediaSession" in navigator)) return;
+
+  if ("MediaMetadata" in window) {
+    const artwork = release.cover
+      ? [{
+          src: new URL(release.cover, document.baseURI).href,
+          type: "image/png"
+        }]
+      : [];
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: track.title,
+      artist: "indydxg",
+      album: release.title,
+      artwork: artwork
+    });
+  }
+
+  navigator.mediaSession.playbackState = "playing";
+}
+
+function playTrackAt(index) {
+  if (!currentRelease) return;
+
+  if (index < 0 || index >= currentRelease.tracks.length) return;
+
+  const releaseIndex = releases.indexOf(currentRelease);
+  const releaseElements = releaseList.querySelectorAll(".release");
+  const releaseElement = releaseElements[releaseIndex];
+
+  const buttons = releaseElement?.querySelectorAll(".track-button");
+  const button = buttons?.[index];
+
+  if (button) {
+    playTrack(currentRelease.tracks[index], currentRelease, button);
+  }
+}
+
+function setMediaAction(action, callback) {
+  if (!("mediaSession" in navigator)) return;
+
+  try {
+    navigator.mediaSession.setActionHandler(action, callback);
+  } catch (error) {
+    // Ignore playback actions unsupported by this browser.
+  }
+}
+
+setMediaAction("play", () => {
+  audio.play().catch(() => {});
+});
+
+setMediaAction("pause", () => {
+  audio.pause();
+});
+
+setMediaAction("previoustrack", () => {
+  if (!currentRelease || currentTrackIndex < 0) return;
+
+  // Restart the current song if it has played for more than 3 seconds.
+  if (audio.currentTime > 3) {
+    audio.currentTime = 0;
+    return;
+  }
+
+  // Otherwise, go to the previous song in this album.
+  if (currentTrackIndex > 0) {
+    playTrackAt(currentTrackIndex - 1);
+  } else {
+    audio.currentTime = 0;
+  }
+});
+
+setMediaAction("nexttrack", () => {
+  if (!currentRelease || currentTrackIndex < 0) return;
+
+  const nextIndex = currentTrackIndex + 1;
+
+  if (nextIndex < currentRelease.tracks.length) {
+    playTrackAt(nextIndex);
+  }
+});
+
+
 function timeLabel(seconds) {
   if (!Number.isFinite(seconds) || seconds < 0) return "00:00";
   const m = Math.floor(seconds / 60);
@@ -320,6 +408,7 @@ function playTrack(track, release, button) {
   nowRelease.textContent = release.title;
   nowDetail.textContent = `${release.year} / ${track.format || "AUDIO"}`;
   formatLabel.textContent = track.format || "AUDIO";
+  updateMediaSession(track, release);
   playButton.disabled = false;
   seek.disabled = false;
   playerState.textContent = "LOADING TRACK";
@@ -392,6 +481,24 @@ playButton.addEventListener("click", () => {
     playerState.textContent = "PAUSED";
   }
 });
+
+
+audio.addEventListener("play", () => {
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.playbackState = "playing";
+  }
+
+  playButton.textContent = "Ⅱ";
+});
+
+audio.addEventListener("pause", () => {
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.playbackState = "paused";
+  }
+
+  playButton.textContent = "▶";
+});
+
 
 audio.addEventListener("loadedmetadata", () => {
   durationEl.textContent = timeLabel(audio.duration);
