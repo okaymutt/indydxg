@@ -17,121 +17,121 @@ const releases = [
     tracks: [
       {
         title: "jumpxut.",
-        src: "music/nxdus%20txllens/jumpxut.mp3",
+        src: "music/jumpxut.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "feng shui.",
-        src: "music/nxdus%20txllens/shui.mp3",
+        src: "music/shui.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "bambxxzled.",
-        src: "music/nxdus%20txllens/bamb.mp3",
+        src: "music/bamb.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "hey buddy,",
-        src: "music/nxdus%20txllens/buddy.mp3",
+        src: "music/buddy.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "bxwser.",
-        src: "music/nxdus%20txllens/bxwser.mp3",
+        src: "music/bxwser.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "lxnewxlves.",
-        src: "music/nxdus%20txllens/lxnewxlves.mp3",
+        src: "music/lxnewxlves.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "wxrld class.",
-        src: "music/nxdus%20txllens/wc.mp3",
+        src: "music/wc.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "absxlute peak.",
-        src: "music/nxdus%20txllens/ap.mp3",
+        src: "music/ap.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "the wxrld is free.",
-        src: "music/nxdus%20txllens/twis.mp3",
+        src: "music/twis.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "harukx.",
-        src: "music/nxdus%20txllens/harukx.mp3",
+        src: "music/harukx.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "fursxna.",
-        src: "music/nxdus%20txllens/fursxna.mp3",
+        src: "music/fursxna.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "hxld ur breath.",
-        src: "music/nxdus%20txllens/hub.mp3",
+        src: "music/hub.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "fantasy sxul.",
-        src: "music/nxdus%20txllens/fs.mp3",
+        src: "music/fs.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "0000nxcturnal.",
-        src: "music/nxdus%20txllens/0000.mp3",
+        src: "music/0000.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "nxdus txllens",
-        src: "music/nxdus%20txllens/nt.mp3",
+        src: "music/nt.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "bigbadwxlf.",
-        src: "music/nxdus%20txllens/badwxlf.mp3",
+        src: "music/badwxlf.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "escape hiraeth.",
-        src: "music/nxdus%20txllens/eh.mp3",
+        src: "music/eh.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "txpscxre freestyle.",
-        src: "music/nxdus%20txllens/tsf.mp3",
+        src: "music/tsf.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "chxw chxw!!!",
-        src: "music/nxdus%20txllens/chxw.mp3",
+        src: "music/chxw.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "everyxne's herx.",
-        src: "music/nxdus%20txllens/herx.mp3",
+        src: "music/herx.mp3",
         format: "MP3",
         durationNote: ""
       }
@@ -147,43 +147,43 @@ const releases = [
     tracks: [
       {
         title: "wanna eat pexple?",
-        src: "music/brxken/wanna%20eat%20people.mp3",
+        src: "music/wanna%20eat%20people.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "lxrd xf the dxgs.",
-        src: "music/brxken/lord%20of%20the%20dogs.mp3",
+        src: "music/lord%20of%20the%20dogs.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "nightmare eyes.",
-        src: "music/brxken/charlie.mp3",
+        src: "music/charlie.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "jake the dxg.",
-        src: "music/brxken/jake%20the%20dog%20new.mp3",
+        src: "music/jake%20the%20dog%20new.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "the hxund xf hades.",
-        src: "music/brxken/hound%20of%20hades.mp3",
+        src: "music/hound%20of%20hades.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "bxnes.",
-        src: "music/brxken/mysuicide.mp3",
+        src: "music/mysuicide.mp3",
         format: "MP3",
         durationNote: ""
       },
       {
         title: "heaven fire.",
-        src: "music/brxken/heaven%20fire%20new.mp3",
+        src: "music/heaven%20fire%20new.mp3",
         format: "MP3",
         durationNote: ""
       }
