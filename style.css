@@ -1439,3 +1439,31 @@ footer a:hover {
   object-fit: cover;
 }
 
+
+
+@media (max-width: 600px) {
+  .now-playing {
+    align-items: center;
+  }
+
+  .now-info {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+  }
+
+  #now-title,
+  #now-release,
+  #now-detail {
+    width: 100%;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .mini-cover {
+    flex: 0 0 72px;
+    width: 72px;
+    height: 72px;
+  }
+}
+
