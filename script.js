@@ -565,4 +565,4 @@ audio.addEventListener("ended", () => {
     if ("mediaSession" in navigator) {
       navigator.mediaSession.playbackState = "none";
     }
-  }
+});
