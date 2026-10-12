@@ -16,20 +16,20 @@ const releases = [
     tracks: [
       {
         title: "dog forever.",
-        src: "music/one%20world%20/dogforever.wav",
-        format: "WAV",
+        src: "music/one%20world%20/dogforever.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "openursoul.",
-        src: "music/one%20world%20/openursoul.wav",
-        format: "WAV",
+        src: "music/one%20world%20/openursoul.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "hiroyuki.",
-        src: "music/one%20world%20/hiroyuki.wav",
-        format: "WAV",
+        src: "music/one%20world%20/hiroyuki.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
@@ -40,80 +40,80 @@ const releases = [
       },
       {
         title: "snoopy.",
-        src: "music/one%20world%20/snoopy.wav",
-        format: "WAV",
+        src: "music/one%20world%20/snoopy.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "jumptrap.",
-        src: "music/one%20world%20/jumptrap.wav",
-        format: "WAV",
+        src: "music/one%20world%20/jumptrap.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "narcissist.",
-        src: "music/one%20world%20/narcissist.wav",
-        format: "WAV",
+        src: "music/one%20world%20/narcissist.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "into hiraeth.",
-        src: "music/one%20world%20/intohiraeth.wav",
-        format: "WAV",
+        src: "music/one%20world%20/intohiraeth.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "dieforglory.",
-        src: "music/one%20world%20/dieforglory.wav",
-        format: "WAV",
+        src: "music/one%20world%20/dieforglory.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "pupstar.",
-        src: "music/one%20world%20/pupstar.wav",
-        format: "WAV",
+        src: "music/one%20world%20/pupstar.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "regular show.",
-        src: "music/one%20world%20/regularshow.wav",
-        format: "WAV",
+        src: "music/one%20world%20/regularshow.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "ghostface.",
-        src: "music/one%20world%20/ghostface.wav",
-        format: "WAV",
+        src: "music/one%20world%20/ghostface.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "darkfantasy.",
-        src: "music/one%20world%20/darkfantasy.wav",
-        format: "WAV",
+        src: "music/one%20world%20/darkfantasy.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "novaturient.",
-        src: "music/one%20world%20/novaturient.wav",
-        format: "WAV",
+        src: "music/one%20world%20/novaturient.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "one chance.",
-        src: "music/one%20world%20/onechance.wav",
-        format: "WAV",
+        src: "music/one%20world%20/onechance.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "one life.",
-        src: "music/one%20world%20/onelife.wav",
-        format: "WAV",
+        src: "music/one%20world%20/onelife.mp3",
+        format: "MP3",
         durationNote: ""
       },
       {
         title: "one world.",
-        src: "music/one%20world%20/oneworld.wav",
-        format: "WAV",
+        src: "music/one%20world%20/oneworld.mp3",
+        format: "MP3",
         durationNote: ""
       }
     ]
