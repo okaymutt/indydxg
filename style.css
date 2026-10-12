@@ -1459,3 +1459,59 @@ footer a:hover {
   object-fit: cover;
 }
 
+/* MOBILE NOW-PLAYING LAYOUT FIX */
+@media (max-width: 680px) {
+.now-info {
+display: grid !important;
+grid-template-columns: 72px minmax(0, 1fr) !important;
+column-gap: 12px;
+align-items: center;
+justify-items: stretch;
+width: 100%;
+min-width: 0;
+padding: 0;
+text-align: left !important;
+}
+
+.now-info-heading {
+grid-column: 1 / -1;
+grid-row: 1;
+width: 100%;
+text-align: center;
+}
+
+.mini-cover {
+grid-column: 1;
+grid-row: 2;
+width: 72px !important;
+height: 72px !important;
+min-width: 0 !important;
+margin: 0;
+}
+
+.track-meta {
+grid-column: 2;
+grid-row: 2;
+width: 100%;
+min-width: 0;
+margin: 0;
+text-align: left !important;
+overflow: hidden;
+}
+
+.track-meta h1,
+.track-meta p,
+.track-meta .eyebrow {
+width: 100%;
+max-width: 100%;
+text-align: left !important;
+overflow-wrap: anywhere;
+word-break: normal;
+}
+
+.player-status {
+grid-column: 1 / -1;
+grid-row: 3;
+text-align: center;
+}
+}
