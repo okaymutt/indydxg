@@ -525,6 +525,11 @@ audio.volume = Number(volume.value);
 document.getElementById("year").textContent = new Date().getFullYear();
 renderReleases();
 
+alert(
+  "Releases: " + releases.length +
+  "\nRendered albums: " + releaseList.children.length
+);
+
 audio.addEventListener("ended", () => {
   seek.value = "0";
   currentTimeEl.textContent = "00:00";
