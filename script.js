@@ -557,7 +557,10 @@ audio.addEventListener("ended", () => {
     playerState.textContent = "ALBUM COMPLETE";
     currentTrackIndex = -1;
 
+
     if ("mediaSession" in navigator) {
       navigator.mediaSession.playbackState = "none";
     }
   }
+});
+
