@@ -449,6 +449,7 @@ const releases = [
 ];
 
 const audio = document.getElementById("audio");
+audio.preload = "auto";
 const playButton = document.getElementById("play-button");
 const seek = document.getElementById("seek");
 const volume = document.getElementById("volume");
@@ -711,6 +712,9 @@ volume.addEventListener("input", () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 renderReleases();
 
+
+/* AUTOMATIC NEXT TRACK — INCLUDING BACKGROUND PLAYBACK */
+
 audio.addEventListener("ended", () => {
   seek.value = "0";
   currentTimeEl.textContent = "00:00";
@@ -723,30 +727,19 @@ audio.addEventListener("ended", () => {
 
   const nextIndex = currentTrackIndex + 1;
 
+  // Play the next track in the current album.
   if (nextIndex < currentRelease.tracks.length) {
-    const nextTrack = currentRelease.tracks[nextIndex];
+    playTrackAt(nextIndex);
+    return;
+  }
 
-    const trackButtons = activeButton
-      ?.closest(".release")
-      ?.querySelectorAll(".track-button");
-    
-    const nextButton = trackButtons?.[nextIndex];
-    
-    if (nextButton) {
-      playTrack(nextTrack, currentRelease, nextButton);
-    } else {
-      playButton.textContent = "▶";
-      playerState.textContent = "TRACK ENDED";
-    }
-  } else {
-    playButton.textContent = "▶";
-    playerState.textContent = "ALBUM COMPLETE";
-    currentTrackIndex = -1;
+  // The album has finished.
+  playButton.textContent = "▶";
+  playerState.textContent = "ALBUM COMPLETE";
+  currentTrackIndex = -1;
 
-
-    if ("mediaSession" in navigator) {
-      navigator.mediaSession.playbackState = "none";
-    }
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.playbackState = "paused";
   }
 });
 
