@@ -1439,31 +1439,36 @@ footer a:hover {
   object-fit: cover;
 }
 
-
-
 @media (max-width: 600px) {
   .now-playing {
+    display: flex;
     align-items: center;
-  }
-
-  .now-info {
-    flex: 1;
-    min-width: 0;
-    text-align: center;
-  }
-
-  #now-title,
-  #now-release,
-  #now-detail {
-    width: 100%;
-    text-align: center;
-    overflow-wrap: anywhere;
+    gap: 12px;
   }
 
   .mini-cover {
     flex: 0 0 72px;
     width: 72px;
     height: 72px;
+    min-width: 72px;
+  }
+
+  .now-info {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  #now-title,
+  #now-release,
+  #now-detail {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    box-sizing: border-box;
   }
 }
-
