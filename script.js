@@ -8,6 +8,137 @@
 
 const releases = [
 
+
+  {
+    title: "nxdus txllens",
+    type: "ALBUM",
+    year: "2026",
+    cover: "coverarts/nxdus%20txllens%20cover%20art.png",
+    tracks: [
+      {
+        title: "jumpxut.",
+        src: "music/nxdus%20txllens/jumpxut.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "feng shui.",
+        src: "music/nxdus%20txllens/shui.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "bambxxzled.",
+        src: "music/nxdus%20txllens/bamb.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "hey buddy,",
+        src: "music/nxdus%20txllens/buddy.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "bxwser.",
+        src: "music/nxdus%20txllens/bxwser.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "lxnewxlves.",
+        src: "music/nxdus%20txllens/lxnewxlves.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "wxrld class.",
+        src: "music/nxdus%20txllens/wc.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "absxlute peak.",
+        src: "music/nxdus%20txllens/ap.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "the wxrld is free.",
+        src: "music/nxdus%20txllens/twis.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "harukx.",
+        src: "music/nxdus%20txllens/harukx.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "fursxna.",
+        src: "music/nxdus%20txllens/fursxna.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "hxld ur breath.",
+        src: "music/nxdus%20txllens/hub.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "fantasy sxul.",
+        src: "music/nxdus%20txllens/fs.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "0000nxcturnal.",
+        src: "music/nxdus%20txllens/0000.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "nxdus txllens",
+        src: "music/nxdus%20txllens/nt.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "bigbadwxlf.",
+        src: "music/nxdus%20txllens/badwxlf.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "escape hiraeth.",
+        src: "music/nxdus%20txllens/eh.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "txpscxre freestyle.",
+        src: "music/nxdus%20txllens/tsf.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "chxw chxw!!!",
+        src: "music/nxdus%20txllens/chxw.mp3",
+        format: "MP3",
+        durationNote: ""
+      },
+      {
+        title: "everyxne's herx.",
+        src: "music/nxdus%20txllens/herx.mp3",
+        format: "MP3",
+        durationNote: ""
+      }
+    ]
+  },
+
+  
   {
     title: "clearly brxken",
     type: "ALBUM",
