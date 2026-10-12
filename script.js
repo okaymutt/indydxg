@@ -520,8 +520,12 @@ seek.addEventListener("input", () => {
     audio.currentTime = (Number(seek.value) / 1000) * audio.duration;
   }
 });
-volume.addEventListener("input", () => { audio.volume = Number(volume.value); });
-audio.volume = Number(volume.value);
+volume.value = "1";
+audio.volume = 1;
+
+volume.addEventListener("input", () => {
+  audio.volume = Number(volume.value);
+});
 document.getElementById("year").textContent = new Date().getFullYear();
 renderReleases();
 
