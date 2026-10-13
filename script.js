@@ -216,7 +216,7 @@ const releases = [
       },
       {
         title: "guardian.",
-        src: "music/guardian.wav",
+        src: "music/guardian.mp3",
         format: "WAV",
         durationNote: ""
       },
@@ -257,7 +257,7 @@ const releases = [
         durationNote: ""
       },
       {
-        title: "regular show.",
+        title: "regular show. [w/ limerence]",
         src: "music/regularshow.mp3",
         format: "MP3",
         durationNote: ""
