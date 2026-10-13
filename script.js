@@ -34,7 +34,7 @@ const releases = [
         durationNote: ""
       },
       {
-        title: "hey buddy,",
+        title: "hey buddy.",
         src: "music/buddy.mp3",
         format: "MP3",
         durationNote: ""
@@ -217,7 +217,7 @@ const releases = [
       {
         title: "guardian.",
         src: "music/guardian.mp3",
-        format: "WAV",
+        format: "MP3",
         durationNote: ""
       },
       {
