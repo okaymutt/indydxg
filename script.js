@@ -122,7 +122,7 @@ const releases = [
     title: "ONEIRATAXIA",
     type: "ALBUM",
     year: "2024",
-    cover: "images/coverarts/IMG_3781.png",
+    cover: "coverarts/IMG_3781.png",
     tracks: [
       { title: "BANDIT.", src: "music/banditsong.mp3", format: "MP3", durationNote: "" },
       { title: "AUTISM.", src: "music/autismsong.mp3", format: "MP3", durationNote: "" },
