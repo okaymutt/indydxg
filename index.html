@@ -4,23 +4,95 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
+
   <link rel="manifest" href="manifest.json">
   <meta name="description" content="indydxg music archive — releases, tracks, and sounds.">
+
   <title>dxgkid media player</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="library-ui.css">
+
+  <style>
+    /* MilkDrop visualizer — monochrome Aero */
+    #visualizer {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: #000;
+    }
+
+    #milkdrop-canvas {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      filter: grayscale(1) contrast(1.12);
+      z-index: 1;
+    }
+
+    #visualizer-gif,
+    #visualizer-cover {
+      display: none !important;
+    }
+
+    .visualizer-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    #milkdrop-status {
+      position: absolute;
+      left: 8px;
+      bottom: 7px;
+      z-index: 3;
+      max-width: calc(100% - 16px);
+      overflow: hidden;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 4px 6px;
+      font: 10px Tahoma, sans-serif;
+      letter-spacing: 1px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body id="top">
   <main class="app-frame">
+
     <header class="titlebar">
       <span class="app-icon" aria-hidden="true">▶</span>
       <span>dxgkid media player</span>
-      <div class="window-buttons" aria-hidden="true"><i>_</i><i>□</i><i>×</i></div>
+      <div class="window-buttons" aria-hidden="true">
+        <i>_</i><i>□</i><i>×</i>
+      </div>
     </header>
-    <div class="menu-bar" aria-label="Player menus"><span>File</span><span>View</span><span>Play</span><span>Txxls</span><span>Help</span></div>
+
+    <div class="menu-bar" aria-label="Player menus">
+      <span>File</span>
+      <span>View</span>
+      <span>Play</span>
+      <span>Txxls</span>
+      <span>Help</span>
+    </div>
+
     <div class="player-shell">
-      <div class="modebar"><span class="mode-orb">‹</span><span class="mode-select">♫ &nbsp; Nxw Playing <b>⌄</b></span></div>
+
+      <div class="modebar">
+        <span class="mode-orb">‹</span>
+        <span class="mode-select">♫ &nbsp; Nxw Playing <b>⌄</b></span>
+      </div>
+
       <div class="player-layout">
+
         <aside class="sidebar" aria-label="Music archive sections">
           <a class="selected" href="#releases">//greatest<br>hits</a>
           <a href="#releases">//media<br>library</a>
@@ -28,94 +100,408 @@
           <a href="#links">//xnline<br>music</a>
           <div class="sidebar-mark">♫</div>
         </aside>
+
         <div class="main-pane">
+
           <section class="now-playing" aria-label="Audio player">
+
             <div class="visualizer" id="visualizer">
-              <img id="visualizer-gif" src="images/go-kitty-go.gif" alt="">
+              <canvas
+                id="milkdrop-canvas"
+                aria-label="Audio-reactive MilkDrop visualizer"
+              ></canvas>
+
+              <img
+                id="visualizer-gif"
+                src="images/go-kitty-go.gif"
+                alt=""
+                hidden
+              >
+
               <img id="visualizer-cover" alt="" hidden>
+
               <div class="visualizer-overlay"></div>
+
+              <div id="milkdrop-status">
+                MILKDROP // WAITING FOR AUDIO
+              </div>
             </div>
+
             <aside class="now-info">
               <div class="now-info-heading">Nxw Playing</div>
+
               <div class="mini-cover" id="mini-cover">
-                <img src="coverarts/20240822_062320_Untitled_Artwork(1).png" alt="">
+                <img
+                  src="coverarts/20240822_062320_Untitled_Artwork(1).png"
+                  alt=""
+                >
               </div>
+
               <div class="track-meta">
-                <div class="eyebrow" id="now-release">INDYDXG // AUDIX</div>
+                <div class="eyebrow" id="now-release">
+                  INDYDXG // AUDIX
+                </div>
+
                 <h1 id="now-title">chxxse a sxng!</h1>
-                <p id="now-detail">pick sxmething frxm the archive belxw</p>
+
+                <p id="now-detail">
+                  pick sxmething frxm the archive belxw
+                </p>
               </div>
-              <div class="player-status" id="player-state">"the beat gx xff???"</div>
+
+              <div class="player-status" id="player-state">
+                "the beat gx xff???"
+              </div>
             </aside>
+
           </section>
-          <div class="track-strip"><span id="format-label">MP3 / WAV</span><span>indydxg music archive</span></div>
+
+          <div class="track-strip">
+            <span id="format-label">MP3 / WAV</span>
+            <span>indydxg music archive</span>
+          </div>
+
           <div class="timeline">
             <span id="current-time">00:00</span>
-            <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek through track" disabled>
+
+            <input
+              id="seek"
+              type="range"
+              min="0"
+              max="1000"
+              value="0"
+              aria-label="Seek through track"
+              disabled
+            >
+
             <span id="duration">00:00</span>
           </div>
+
           <div class="control-deck">
-            <button class="transport-button small" type="button" aria-label="Previous track" disabled>◀◀</button>
-            <button id="play-button" class="transport-button play-button" type="button" aria-label="Play or pause" disabled>▶</button>
-            <button class="transport-button small" type="button" aria-label="Stop" disabled>■</button>
-            <button class="transport-button small" type="button" aria-label="Next track" disabled>▶▶</button>
+            <button
+              class="transport-button small"
+              type="button"
+              aria-label="Previous track"
+              disabled
+            >◀◀</button>
+
+            <button
+              id="play-button"
+              class="transport-button play-button"
+              type="button"
+              aria-label="Play or pause"
+              disabled
+            >▶</button>
+
+            <button
+              class="transport-button small"
+              type="button"
+              aria-label="Stop"
+              disabled
+            >■</button>
+
+            <button
+              class="transport-button small"
+              type="button"
+              aria-label="Next track"
+              disabled
+            >▶▶</button>
+
             <span class="deck-divider"></span>
+
             <label for="volume">VXL</label>
-            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+
+            <input
+              id="volume"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+              aria-label="Volume"
+            >
+
             <span class="deck-spacer"></span>
             <span class="deck-badge" aria-hidden="true">♫</span>
           </div>
+
           <audio id="audio" preload="metadata"></audio>
+
         </div>
       </div>
 
       <section id="releases" class="library-panel">
+
         <div class="library-heading">
           <span>Media Library</span>
           <span id="release-count">00</span>
         </div>
 
         <div class="library-tabs" role="tablist" aria-label="Release categories">
-          <button id="singles-tab" class="library-tab" type="button"
-            role="tab" aria-selected="false" aria-controls="singles-view">
-            SINGLES
-          </button>
-          <button id="projects-tab" class="library-tab active" type="button"
-            role="tab" aria-selected="true" aria-controls="projects-view">
-            PRXJECTS
-          </button>
+
+          <button
+            id="singles-tab"
+            class="library-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="singles-view"
+          >SINGLES</button>
+
+          <button
+            id="projects-tab"
+            class="library-tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="projects-view"
+          >PRXJECTS</button>
+
         </div>
 
-        <div id="singles-view" class="library-view" role="tabpanel"
-          aria-labelledby="singles-tab" hidden>
+        <div
+          id="singles-view"
+          class="library-view"
+          role="tabpanel"
+          aria-labelledby="singles-tab"
+          hidden
+        >
           <div class="library-subhead">
             <span>indydxg / SINGLES</span>
             <span>PUBLIC RELEASES</span>
           </div>
+
           <div id="release-list" class="release-list"></div>
         </div>
 
-        <div id="projects-view" class="library-view" role="tabpanel"
-          aria-labelledby="projects-tab">
+        <div
+          id="projects-view"
+          class="library-view"
+          role="tabpanel"
+          aria-labelledby="projects-tab"
+        >
           <div class="library-subhead">
             <span>indydxg / PRXJECTS</span>
             <span>ALBUMS + EPS</span>
           </div>
+
           <div id="project-grid" class="project-grid"></div>
+
           <div id="project-detail" class="project-detail" hidden>
-            <button id="back-to-projects" class="back-button" type="button">
-              ‹ BACK TO PRXJECTS
-            </button>
+            <button
+              id="back-to-projects"
+              class="back-button"
+              type="button"
+            >‹ BACK TO PRXJECTS</button>
+
             <div id="project-content"></div>
           </div>
         </div>
 
-        <p class="edit-note">thx fxr listening :3 &gt;:3 x3 · public releases xnly</p>
+        <p class="edit-note">
+          thx fxr listening :3 &gt;:3 x3 · public releases xnly
+        </p>
+
       </section>
+
     </div>
   </main>
-  <footer id="links"><a href="https://indydxg.itch.io/">itch.io</a><span>© <span id="year"></span> times infinity</span><a href="https://timesinfinity.xyz">website</a></footer>
+
+  <footer id="links">
+    <a href="https://indydxg.itch.io/">itch.io</a>
+    <span>© <span id="year"></span> times infinity</span>
+    <a href="https://timesinfinity.xyz">website</a>
+  </footer>
+
+  <!-- MilkDrop preset library -->
+  <script src="https://unpkg.com/butterchurn-presets@3.0.0-beta.4/dist/base.min.js"></script>
+
+  <!-- Existing music player and library -->
   <script src="script.js"></script>
   <script src="library-ui.js"></script>
+
+  <!-- MilkDrop engine -->
+  <script type="module">
+    import butterchurn from
+      "https://unpkg.com/butterchurn@3.0.0-beta.5/dist/butterchurn.js";
+
+    const audio = document.getElementById("audio");
+    const canvas = document.getElementById("milkdrop-canvas");
+    const pane = document.getElementById("visualizer");
+    const status = document.getElementById("milkdrop-status");
+
+    let audioContext = null;
+    let audioSource = null;
+    let audioDelay = null;
+    let visualizer = null;
+    let animationFrame = null;
+    let presetTimer = null;
+    let presetNames = [];
+    let presetIndex = -1;
+    let initialized = false;
+
+    function setStatus(message) {
+      status.textContent = message;
+    }
+
+    function resizeVisualizer() {
+      if (!visualizer) return;
+
+      const rect = pane.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+
+      visualizer.setRendererSize(
+        Math.round(rect.width * ratio),
+        Math.round(rect.height * ratio)
+      );
+    }
+
+    function renderFrame() {
+      if (!visualizer || audio.paused || audio.ended) {
+        animationFrame = null;
+        return;
+      }
+
+      visualizer.render();
+      animationFrame = requestAnimationFrame(renderFrame);
+    }
+
+    function startRendering() {
+      if (!visualizer || animationFrame !== null) return;
+      animationFrame = requestAnimationFrame(renderFrame);
+    }
+
+    function stopRendering() {
+      if (animationFrame !== null) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+    }
+
+    function nextPreset() {
+      if (!visualizer || !presetNames.length) return;
+
+      let nextIndex = Math.floor(Math.random() * presetNames.length);
+
+      if (presetNames.length > 1 && nextIndex === presetIndex) {
+        nextIndex = (nextIndex + 1) % presetNames.length;
+      }
+
+      presetIndex = nextIndex;
+
+      const presets = window.base?.default || window.base;
+      const name = presetNames[presetIndex];
+
+      try {
+        visualizer.loadPreset(presets[name], 3.5);
+        setStatus("MILKDROP // " + name.toUpperCase());
+      } catch (error) {
+        console.error("MilkDrop preset failed:", error);
+        setStatus("MILKDROP // PRESET ERROR");
+      }
+    }
+
+    async function initializeMilkDrop() {
+      if (initialized) return;
+
+      try {
+        const presets = window.base?.default || window.base;
+
+        if (!presets) {
+          throw new Error("MilkDrop presets failed to load.");
+        }
+
+        presetNames = Object.keys(presets);
+
+        if (!presetNames.length) {
+          throw new Error("No MilkDrop presets were found.");
+        }
+
+        const AudioContextClass =
+          window.AudioContext || window.webkitAudioContext;
+
+        if (!AudioContextClass) {
+          throw new Error("Web Audio is not supported.");
+        }
+
+        audioContext = new AudioContextClass();
+
+        const rect = pane.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+
+        visualizer = butterchurn.createVisualizer(
+          audioContext,
+          canvas,
+          {
+            width: Math.max(1, Math.round(rect.width * ratio)),
+            height: Math.max(1, Math.round(rect.height * ratio)),
+            pixelRatio: ratio,
+            textureRatio: 0.5
+          }
+        );
+
+        audioSource = audioContext.createMediaElementSource(audio);
+        audioDelay = audioContext.createDelay();
+
+        audioDelay.delayTime.value = 0.02;
+
+        audioSource.connect(audioDelay);
+        audioDelay.connect(audioContext.destination);
+        visualizer.connectAudio(audioDelay);
+
+        initialized = true;
+        pane.classList.add("milkdrop-ready");
+
+        nextPreset();
+        resizeVisualizer();
+
+        presetTimer = window.setInterval(nextPreset, 18000);
+
+        await audioContext.resume();
+        startRendering();
+
+        setStatus("MILKDROP // PLAYING");
+      } catch (error) {
+        console.error("MilkDrop initialization failed:", error);
+        setStatus("MILKDROP // UNAVAILABLE");
+      }
+    }
+
+    audio.addEventListener("play", async () => {
+      await initializeMilkDrop();
+
+      if (!audioContext || !visualizer) return;
+
+      try {
+        await audioContext.resume();
+        startRendering();
+        setStatus("MILKDROP // PLAYING");
+      } catch (error) {
+        console.error("Could not start MilkDrop:", error);
+      }
+    });
+
+    audio.addEventListener("pause", stopRendering);
+    audio.addEventListener("ended", stopRendering);
+
+    window.addEventListener("resize", resizeVisualizer);
+
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(resizeVisualizer).observe(pane);
+    }
+
+    window.addEventListener("pagehide", () => {
+      stopRendering();
+
+      if (presetTimer !== null) {
+        clearInterval(presetTimer);
+      }
+    });
+
+    setStatus("MILKDROP // READY TO INITIALIZE");
+  </script>
+
 </body>
 </html>
