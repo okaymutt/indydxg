@@ -2197,3 +2197,243 @@ a:focus-visible {
   }
 }
 
+/* ===== INDYDXG: MONOCHROME AERO THEME ===== */
+
+:root {
+--window-black: #080808;
+--window-dark: #191919;
+--window-mid: #424242;
+--window-light: #bdbdbd;
+--window-white: #f2f2f2;
+}
+
+/* Main window background */
+body {
+background: linear-gradient(
+145deg,
+#080808 0%,
+#242424 38%,
+#090909 72%,
+#383838 100%
+);
+color: var(--window-white);
+}
+
+/* Outer application frame */
+.app-frame {
+background: linear-gradient(
+135deg,
+#555 0%,
+#242424 12%,
+#101010 48%,
+#363636 78%,
+#111 100%
+);
+border: 1px solid #858585;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.35),
+inset 0 0 0 1px rgba(0,0,0,.8),
+0 12px 35px rgba(0,0,0,.65);
+}
+
+/* Windows Aero-style title bar */
+.titlebar {
+background: linear-gradient(
+180deg,
+#777 0%,
+#414141 18%,
+#222 48%,
+#101010 85%,
+#444 100%
+);
+color: #fff;
+border-bottom: 1px solid #080808;
+text-shadow: 0 1px 2px #000;
+}
+
+/* Menu strip */
+.menu-bar {
+background: linear-gradient(
+180deg,
+#414141,
+#1b1b1b 48%,
+#303030
+);
+color: #eee;
+border-bottom: 1px solid #050505;
+}
+
+/* Player shell and main panels */
+.player-shell,
+.main-pane,
+.library-panel {
+background: linear-gradient(
+145deg,
+#292929 0%,
+#141414 45%,
+#222 100%
+);
+color: #eee;
+}
+
+/* Sidebar */
+.sidebar {
+background: linear-gradient(
+90deg,
+#101010,
+#292929 55%,
+#171717
+);
+border-right: 1px solid #555;
+}
+
+.sidebar a {
+color: #c8c8c8;
+}
+
+.sidebar a:hover,
+.sidebar a.selected {
+color: #fff;
+background: linear-gradient(
+90deg,
+#555,
+#292929 60%,
+#171717
+);
+border-color: #888;
+}
+
+/* Now-playing information */
+.now-playing,
+.now-info,
+.now-info-heading {
+color: #eee;
+}
+
+.now-info-heading,
+.library-heading,
+.library-subhead {
+background: linear-gradient(
+180deg,
+#505050,
+#292929 48%,
+#191919
+);
+color: #fff;
+border-color: #666;
+}
+
+/* Transport controls */
+.transport-button,
+.library-tab,
+.back-button {
+color: #f5f5f5;
+background: linear-gradient(
+180deg,
+#777 0%,
+#454545 25%,
+#292929 55%,
+#171717 100%
+);
+border: 1px solid #888;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.3),
+inset 0 -1px 0 rgba(0,0,0,.65);
+}
+
+.transport-button:hover,
+.library-tab:hover,
+.back-button:hover {
+background: linear-gradient(
+180deg,
+#999,
+#555 45%,
+#292929
+);
+border-color: #ddd;
+}
+
+.transport-button:active,
+.library-tab:active,
+.back-button:active {
+background: linear-gradient(180deg, #161616, #454545);
+}
+
+/* Active library tab */
+.library-tab.active,
+.library-tab[aria-selected="true"] {
+background: linear-gradient(
+180deg,
+#eee,
+#aaa 40%,
+#666 100%
+);
+color: #080808;
+border-color: #eee;
+}
+
+/* Project cards */
+.project-card,
+.release,
+.project-detail {
+color: #eee;
+background: linear-gradient(
+145deg,
+#3d3d3d,
+#222 45%,
+#111
+);
+border: 1px solid #5e5e5e;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.13),
+0 3px 8px rgba(0,0,0,.35);
+}
+
+.project-card:hover,
+.release:hover {
+background: linear-gradient(
+145deg,
+#555,
+#292929 55%,
+#171717
+);
+border-color: #aaa;
+}
+
+/* Seek bar and volume slider */
+input[type="range"] {
+accent-color: #dedede;
+}
+
+/* Track information and small labels */
+.eyebrow,
+.track-strip,
+.player-status,
+.edit-note,
+.library-subhead,
+footer {
+color: #bcbcbc;
+}
+
+/* Bottom border and footer */
+.track-strip,
+.timeline,
+.control-deck {
+border-color: #505050;
+}
+
+footer a {
+color: #eee;
+}
+
+footer a:hover {
+color: #aaa;
+text-decoration: underline;
+}
+
+/* Keep cover artwork in its original colors */
+.mini-cover img,
+.project-card img,
+.release img {
+filter: none;
+}
