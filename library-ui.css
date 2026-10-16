@@ -1,0 +1,227 @@
+/* INDYDXG // SINGLES + PRXJECTS LIBRARY UI */
+
+.library-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 9px;
+  background: #25292e;
+  border-bottom: 1px solid #505762;
+}
+
+.library-tab {
+  min-height: 38px;
+  border: 1px solid #59636f;
+  border-radius: 3px;
+  background: linear-gradient(#414750, #2b3036);
+  color: #bdc8d5;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.library-tab:hover,
+.library-tab.active {
+  background: linear-gradient(#84909d, #515b66 55%, #343a42);
+  border-color: #a9bacb;
+  color: #fff;
+}
+
+.library-tab:focus-visible,
+.project-card:focus-visible,
+.back-button:focus-visible {
+  outline: 2px solid #b8d9fa;
+  outline-offset: 2px;
+}
+
+.library-view[hidden],
+.project-detail[hidden],
+.project-grid[hidden] {
+  display: none !important;
+}
+
+.single-release {
+  grid-template-columns: 100px minmax(0, 1fr) 58px;
+}
+
+.single-info {
+  min-width: 0;
+}
+
+.single-info .track-list {
+  margin-top: 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #4c545e;
+  border-radius: 4px;
+  background: linear-gradient(#363c44, #25292e);
+  color: #e0e5eb;
+  text-align: left;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  cursor: pointer;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.project-card:hover {
+  border-color: #a9c8e5;
+  background: linear-gradient(#4a535e, #30363e);
+}
+
+.project-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid #69737f;
+  background: #111317;
+}
+
+.project-card .cover-placeholder {
+  display: grid;
+  place-items: center;
+  color: #d5dce5;
+  font-weight: bold;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+.project-title {
+  margin-top: 9px;
+  color: #f1f4f8;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.project-date,
+.project-type {
+  margin-top: 4px;
+  color: #b5c2d0;
+  font-size: 10px;
+}
+
+.project-type {
+  letter-spacing: 1px;
+}
+
+.project-detail {
+  padding: 14px;
+}
+
+.back-button {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border: 1px solid #66717d;
+  border-radius: 3px;
+  background: linear-gradient(#454c55, #292e34);
+  color: #e0e5eb;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: linear-gradient(#606b78, #373e46);
+}
+
+.project-detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #454c55;
+}
+
+.project-detail-cover {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid #69737f;
+  background: #111317;
+}
+
+.project-detail-info {
+  min-width: 0;
+}
+
+.project-detail-heading h2 {
+  margin: 6px 0;
+  color: #f0f4f8;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.project-detail-heading p {
+  margin: 5px 0;
+  color: #b8c0ca;
+  font-size: 11px;
+}
+
+.library-empty {
+  margin: 0;
+  padding: 24px 16px;
+  color: #b8c0ca;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .project-card {
+    padding: 5px;
+  }
+
+  .project-title {
+    font-size: 11px;
+  }
+
+  .single-release {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .single-release .release-cover {
+    width: 68px;
+  }
+
+  .single-release .release-side {
+    display: none;
+  }
+
+  .project-detail {
+    padding: 10px;
+  }
+
+  .project-detail-cover {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+@media (max-width: 380px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
