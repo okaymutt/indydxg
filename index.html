@@ -8,6 +8,7 @@
   <meta name="description" content="indydxg music archive — releases, tracks, and sounds.">
   <title>dxgkid media player</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="library-ui.css">
 </head>
 <body id="top">
   <main class="app-frame">
@@ -17,7 +18,6 @@
       <div class="window-buttons" aria-hidden="true"><i>_</i><i>□</i><i>×</i></div>
     </header>
     <div class="menu-bar" aria-label="Player menus"><span>File</span><span>View</span><span>Play</span><span>Txxls</span><span>Help</span></div>
-
     <div class="player-shell">
       <div class="modebar"><span class="mode-orb">‹</span><span class="mode-select">♫ &nbsp; Nxw Playing <b>⌄</b></span></div>
       <div class="player-layout">
@@ -28,23 +28,18 @@
           <a href="#links">//xnline<br>music</a>
           <div class="sidebar-mark">♫</div>
         </aside>
-
         <div class="main-pane">
           <section class="now-playing" aria-label="Audio player">
-
-          <div class="visualizer" id="visualizer">
-            <img id="visualizer-gif" src="images/go-kitty-go.gif" alt="">
-            <img id="visualizer-cover" alt="" hidden>
-            <div class="visualizer-overlay">
+            <div class="visualizer" id="visualizer">
+              <img id="visualizer-gif" src="images/go-kitty-go.gif" alt="">
+              <img id="visualizer-cover" alt="" hidden>
+              <div class="visualizer-overlay"></div>
             </div>
-          </div>
             <aside class="now-info">
               <div class="now-info-heading">Nxw Playing</div>
-
               <div class="mini-cover" id="mini-cover">
-                <img src="coverarts/20240822_062320_Untitled_Artwork(1).png">
+                <img src="coverarts/20240822_062320_Untitled_Artwork(1).png" alt="">
               </div>
-
               <div class="track-meta">
                 <div class="eyebrow" id="now-release">INDYDXG // AUDIX</div>
                 <h1 id="now-title">chxxse a sxng!</h1>
@@ -75,15 +70,52 @@
       </div>
 
       <section id="releases" class="library-panel">
-        <div class="library-heading"><span>Media Library</span><span id="release-count">01—00</span></div>
-        <div class="library-subhead"><span>indydxg / RELEASES</span><span>SELECT A TRACK MFFFFFF!!</span></div>
-        <div id="release-list" class="release-list"></div>
-        <p class="edit-note">thx fxr listening :3 >:3 x3 · public releases xnly</p>
+        <div class="library-heading">
+          <span>Media Library</span>
+          <span id="release-count">00</span>
+        </div>
+
+        <div class="library-tabs" role="tablist" aria-label="Release categories">
+          <button id="singles-tab" class="library-tab" type="button"
+            role="tab" aria-selected="false" aria-controls="singles-view">
+            SINGLES
+          </button>
+          <button id="projects-tab" class="library-tab active" type="button"
+            role="tab" aria-selected="true" aria-controls="projects-view">
+            PRXJECTS
+          </button>
+        </div>
+
+        <div id="singles-view" class="library-view" role="tabpanel"
+          aria-labelledby="singles-tab" hidden>
+          <div class="library-subhead">
+            <span>indydxg / SINGLES</span>
+            <span>PUBLIC RELEASES</span>
+          </div>
+          <div id="release-list" class="release-list"></div>
+        </div>
+
+        <div id="projects-view" class="library-view" role="tabpanel"
+          aria-labelledby="projects-tab">
+          <div class="library-subhead">
+            <span>indydxg / PRXJECTS</span>
+            <span>ALBUMS + EPS</span>
+          </div>
+          <div id="project-grid" class="project-grid"></div>
+          <div id="project-detail" class="project-detail" hidden>
+            <button id="back-to-projects" class="back-button" type="button">
+              ‹ BACK TO PRXJECTS
+            </button>
+            <div id="project-content"></div>
+          </div>
+        </div>
+
+        <p class="edit-note">thx fxr listening :3 &gt;:3 x3 · public releases xnly</p>
       </section>
     </div>
   </main>
-
   <footer id="links"><a href="https://indydxg.itch.io/">itch.io</a><span>© <span id="year"></span> times infinity</span><a href="https://timesinfinity.xyz">website</a></footer>
   <script src="script.js"></script>
+  <script src="library-ui.js"></script>
 </body>
 </html>
