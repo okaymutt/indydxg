@@ -1915,3 +1915,285 @@ input:focus-visible {
   outline-color: #b7d9f7;
 }
 
+/* ==========================================
+   INDYDXG // MONOCHROME AERO THEME
+   Black glass · Silver chrome · White text
+   ========================================== */
+
+:root {
+  color-scheme: dark;
+  --aero-black: #080808;
+  --aero-dark: #141414;
+  --aero-panel: #202020;
+  --aero-silver: #858585;
+  --aero-border: #626262;
+  --aero-highlight: #eeeeee;
+  --aero-text: #f5f5f5;
+  --aero-muted: #b0b0b0;
+}
+
+html {
+  background: #050505;
+}
+
+body {
+  color: var(--aero-text);
+  background:
+    radial-gradient(ellipse at 50% 0%, #343434 0%, #151515 42%, #050505 100%);
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+/* Main application window */
+.app-frame {
+  color: var(--aero-text);
+  background: rgba(13, 13, 13, 0.94);
+  border: 1px solid #929292;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 1px #080808,
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 12px 42px rgba(0,0,0,0.85);
+  overflow: hidden;
+}
+
+/* Glossy glass title bar */
+.titlebar {
+  color: #fff;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.25) 0%,
+      rgba(190,190,190,0.13) 3%,
+      rgba(70,70,70,0.18) 45%,
+      rgba(0,0,0,0.8) 100%
+    ),
+    linear-gradient(90deg, #3b3b3b, #111 55%, #292929);
+  border-bottom: 1px solid #777;
+  text-shadow: 0 1px 2px #000;
+}
+
+/* Menu and navigation bars */
+.menu-bar,
+.modebar,
+.library-tabs {
+  color: #eee;
+  background: linear-gradient(#393939, #171717 55%, #242424);
+  border-color: #626262;
+}
+
+/* General content panels */
+.player-shell,
+.player-layout,
+.sidebar,
+.main-pane,
+.library-panel,
+.now-playing,
+.track-strip,
+.control-deck {
+  color: var(--aero-text);
+  background-color: rgba(18, 18, 18, 0.94);
+  border-color: var(--aero-border);
+}
+
+/* Recessed media display */
+.now-playing,
+#visualizer {
+  background:
+    linear-gradient(135deg, #252525, #080808 65%);
+  border-color: #626262;
+  box-shadow:
+    inset 0 1px 7px rgba(0,0,0,0.95),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* Keep album artwork in its original full color */
+#visualizer-cover,
+#mini-cover,
+.release-cover,
+.project-cover,
+.project-detail-cover,
+img {
+  filter: none;
+}
+
+/* Titles and supporting information */
+#now-title,
+#now-release,
+.project-title,
+.project-detail-heading h2,
+.library-heading {
+  color: #fff;
+  text-shadow: 0 1px 2px #000;
+}
+
+#now-detail,
+#player-state,
+.project-date,
+.project-type,
+.library-subhead,
+.edit-note {
+  color: var(--aero-muted);
+}
+
+/* Silver Aero-style buttons */
+button,
+.play-button,
+.back-button,
+.library-tab {
+  color: #f7f7f7;
+  background:
+    linear-gradient(
+      180deg,
+      #777 0%,
+      #4c4c4c 45%,
+      #292929 50%,
+      #171717 100%
+    );
+  border: 1px solid #8a8a8a;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.28),
+    0 1px 2px rgba(0,0,0,0.7);
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+button:hover,
+.play-button:hover,
+.back-button:hover,
+.library-tab:hover {
+  color: #fff;
+  background:
+    linear-gradient(180deg, #a0a0a0, #656565 48%, #303030 52%, #202020);
+  border-color: #d0d0d0;
+}
+
+button:active,
+.play-button:active,
+.back-button:active,
+.library-tab:active {
+  background: linear-gradient(#151515, #414141);
+  box-shadow: inset 0 2px 4px #000;
+}
+
+/* Selected tab: bright silver, no accent color */
+.library-tab.active {
+  color: #fff;
+  background: linear-gradient(#a2a2a2, #666 48%, #333 52%, #222);
+  border-color: #e2e2e2;
+}
+
+/* Album / EP cover grid */
+.project-grid {
+  background: transparent;
+}
+
+.project-card {
+  color: #eee;
+  background:
+    linear-gradient(145deg, #383838, #171717 60%, #252525);
+  border: 1px solid #505050;
+  border-radius: 4px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 2px 5px rgba(0,0,0,0.5);
+}
+
+.project-card:hover {
+  background: linear-gradient(145deg, #555, #242424 60%, #383838);
+  border-color: #c5c5c5;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.24),
+    0 0 8px rgba(255,255,255,0.12);
+}
+
+/* Artwork gets a subtle silver frame */
+.project-cover,
+.project-detail-cover,
+.release-cover {
+  border: 1px solid #777;
+  box-shadow: 0 1px 4px #000;
+}
+
+/* Track lists */
+.track-list,
+.track-list button,
+.track-button {
+  color: #e5e5e5;
+  border-color: #424242;
+}
+
+.track-list button:hover,
+.track-button:hover {
+  background: #393939;
+  color: #fff;
+}
+
+.track-list button.active,
+.track-button.active {
+  background: linear-gradient(#656565, #303030);
+  color: #fff;
+  border-color: #aaa;
+}
+
+/* Inputs and playback controls */
+input,
+select,
+textarea {
+  color: #fff;
+  background: #101010;
+  border: 1px solid #666;
+  accent-color: #d8d8d8;
+}
+
+input[type="range"] {
+  accent-color: #d8d8d8;
+}
+
+/* Project detail header and back navigation */
+.project-detail-heading {
+  border-bottom: 1px solid #505050;
+}
+
+.back-button {
+  letter-spacing: 0.4px;
+}
+
+/* Scrollbars */
+* {
+  scrollbar-color: #686868 #151515;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #555, #888, #444);
+  border: 1px solid #222;
+  border-radius: 2px;
+}
+
+/* Keyboard accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Phone layout */
+@media (max-width: 680px) {
+  .app-frame {
+    border-radius: 5px;
+  }
+
+  .project-card {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+}
+
