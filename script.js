@@ -59,23 +59,23 @@ const releases = [
     year: "2025",
     cover: "coverarts/oneworld%20art%20new.png",
     tracks: [
-      { title: "dog forever.", src: "music/dogforever.mp3", format: "MP3", durationNote: "" },
-      { title: "openursoul.", src: "music/openursoul.mp3", format: "MP3", durationNote: "" },
-      { title: "hiroyuki.", src: "music/hiroyuki.mp3", format: "MP3", durationNote: "" },
+      { title: "dxg fxrever.", src: "music/dogforever.mp3", format: "MP3", durationNote: "" },
+      { title: "xpenursxul.", src: "music/openursoul.mp3", format: "MP3", durationNote: "" },
+      { title: "hirxyuki.", src: "music/hiroyuki.mp3", format: "MP3", durationNote: "" },
       { title: "guardian.", src: "music/guardian.mp3", format: "MP3", durationNote: "" },
-      { title: "snoopy.", src: "music/snoopy.mp3", format: "MP3", durationNote: "" },
+      { title: "snxxpy.", src: "music/snoopy.mp3", format: "MP3", durationNote: "" },
       { title: "jumptrap.", src: "music/jumptrap.mp3", format: "MP3", durationNote: "" },
       { title: "narcissist.", src: "music/narcissist.mp3", format: "MP3", durationNote: "" },
-      { title: "into hiraeth.", src: "music/intohiraeth.mp3", format: "MP3", durationNote: "" },
-      { title: "dieforglory.", src: "music/dieforglory.mp3", format: "MP3", durationNote: "" },
+      { title: "intx hiraeth.", src: "music/intohiraeth.mp3", format: "MP3", durationNote: "" },
+      { title: "dieforglxry.", src: "music/dieforglory.mp3", format: "MP3", durationNote: "" },
       { title: "pupstar.", src: "music/pupstar.mp3", format: "MP3", durationNote: "" },
       { title: "regular show. [w/ limerence]", src: "music/regularshow.mp3", format: "MP3", durationNote: "" },
-      { title: "ghostface.", src: "music/ghostface.mp3", format: "MP3", durationNote: "" },
+      { title: "ghxstface.", src: "music/ghostface.mp3", format: "MP3", durationNote: "" },
       { title: "darkfantasy.", src: "music/darkfantasy.mp3", format: "MP3", durationNote: "" },
-      { title: "novaturient.", src: "music/novaturient.mp3", format: "MP3", durationNote: "" },
-      { title: "one chance.", src: "music/onechance.mp3", format: "MP3", durationNote: "" },
-      { title: "one life.", src: "music/onelife.mp3", format: "MP3", durationNote: "" },
-      { title: "one world.", src: "music/oneworld.mp3", format: "MP3", durationNote: "" }
+      { title: "nxvaturient.", src: "music/novaturient.mp3", format: "MP3", durationNote: "" },
+      { title: "xne chance.", src: "music/onechance.mp3", format: "MP3", durationNote: "" },
+      { title: "xne life.", src: "music/onelife.mp3", format: "MP3", durationNote: "" },
+      { title: "xne wxrld.", src: "music/oneworld.mp3", format: "MP3", durationNote: "" }
     ]
   },
 
@@ -88,21 +88,21 @@ const releases = [
       { title: "i wish...", src: "music/the%20world%20doesn't%20care/i%20wish.mp3", format: "MP3", durationNote: "" },
       { title: "what a drag.", src: "music/the%20world%20doesn't%20care/what%20a%20drag.mp3", format: "MP3", durationNote: "" },
       { title: "dear diary.", src: "music/the%20world%20doesn't%20care/dear%20diary.mp3", format: "MP3", durationNote: "" },
-      { title: "rule the world.", src: "music/the%20world%20doesn't%20care/rule%20the%20world.mp3", format: "MP3", durationNote: "" },
+      { title: "rule the wxrld.", src: "music/the%20world%20doesn't%20care/rule%20the%20world.mp3", format: "MP3", durationNote: "" },
       { title: "infinity.", src: "music/the%20world%20doesn't%20care/infinity.mp3", format: "MP3", durationNote: "" },
-      { title: "immortal.", src: "music/the%20world%20doesn't%20care/immortal.mp3", format: "MP3", durationNote: "" },
+      { title: "immxrtal.", src: "music/the%20world%20doesn't%20care/immortal.mp3", format: "MP3", durationNote: "" },
       { title: "wicked.", src: "music/the%20world%20doesn't%20care/wicked.mp3", format: "MP3", durationNote: "" },
-      { title: "borne of loam.", src: "music/the%20world%20doesn't%20care/borne%20of%20loam.mp3", format: "MP3", durationNote: "" },
-      { title: "chow o' clock.", src: "music/the%20world%20doesn't%20care/chow%20o'%20clock.mp3", format: "MP3", durationNote: "" },
-      { title: "newfoundland.", src: "music/the%20world%20doesn't%20care/newfoundland.mp3", format: "MP3", durationNote: "" },
-      { title: "how they judge.", src: "music/the%20world%20doesn't%20care/how%20they%20judge.mp3", format: "MP3", durationNote: "" },
+      { title: "bxrne xf lxam.", src: "music/the%20world%20doesn't%20care/borne%20of%20loam.mp3", format: "MP3", durationNote: "" },
+      { title: "chxw x' clxck.", src: "music/the%20world%20doesn't%20care/chow%20o'%20clock.mp3", format: "MP3", durationNote: "" },
+      { title: "newfxundland.", src: "music/the%20world%20doesn't%20care/newfoundland.mp3", format: "MP3", durationNote: "" },
+      { title: "hxw they judge.", src: "music/the%20world%20doesn't%20care/how%20they%20judge.mp3", format: "MP3", durationNote: "" },
       { title: "superstar.", src: "music/the%20world%20doesn't%20care/superstar.mp3", format: "MP3", durationNote: "" },
-      { title: "the world doesn't care.", src: "music/the%20world%20doesn't%20care/the%20world%20doesn't%20care.mp3", format: "MP3", durationNote: "" },
+      { title: "the wxrld dxesn't care.", src: "music/the%20world%20doesn't%20care/the%20world%20doesn't%20care.mp3", format: "MP3", durationNote: "" },
       { title: "silent hill.", src: "music/the%20world%20doesn't%20care/silent%20hill.mp3", format: "MP3", durationNote: "" },
       { title: "puer aeternus.", src: "music/the%20world%20doesn't%20care/puer%20aeternus.mp3", format: "MP3", durationNote: "" },
-      { title: "don't look at me.", src: "music/the%20world%20doesn't%20care/don't%20look%20at%20me.mp3", format: "MP3", durationNote: "" },
-      { title: "the world is ours.", src: "music/the%20world%20doesn't%20care/the%20world%20is%20ours.mp3", format: "MP3", durationNote: "" },
-      { title: "the myth of sisyphus.", src: "music/the%20world%20doesn't%20care/the%20myth%20of%20sisyphus.mp3", format: "MP3", durationNote: "" }
+      { title: "dxn't lxxk at me.", src: "music/the%20world%20doesn't%20care/don't%20look%20at%20me.mp3", format: "MP3", durationNote: "" },
+      { title: "the wxrld is xurs.", src: "music/the%20world%20doesn't%20care/the%20world%20is%20ours.mp3", format: "MP3", durationNote: "" },
+      { title: "the myth xf sisyphus.", src: "music/the%20world%20doesn't%20care/the%20myth%20of%20sisyphus.mp3", format: "MP3", durationNote: "" }
     ]
   },
 
@@ -112,9 +112,9 @@ const releases = [
     year: "2024",
     cover: "coverarts/dogforever%20cover.png",
     tracks: [
-      { title: "stack more, talk less.", src: "music/12%20mutts/stackmore.mp3", format: "MP3", durationNote: "" },
-      { title: "total skorn.", src: "music/12%20mutts/totalskornsong.mp3", format: "MP3", durationNote: "" },
-      { title: "clairvoyant.", src: "music/12%20mutts/clairvoyantsong.mp3", format: "MP3", durationNote: "" }
+      { title: "stack mxre, talk less.", src: "music/12%20mutts/stackmore.mp3", format: "MP3", durationNote: "" },
+      { title: "txtal skxrn.", src: "music/12%20mutts/totalskornsong.mp3", format: "MP3", durationNote: "" },
+      { title: "clairvxyant.", src: "music/12%20mutts/clairvoyantsong.mp3", format: "MP3", durationNote: "" }
     ]
   },
 
