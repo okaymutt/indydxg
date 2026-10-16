@@ -1540,3 +1540,106 @@ footer a:hover {
     text-align: center;
   }
 }
+
+
+/* indydxg — dark Windows XP theme */
+
+body {
+  background: #17191c;
+  color: #e0e5eb;
+}
+
+.app-frame {
+  background: #292c31;
+  border: 1px solid #454b54;
+  color: #e0e5eb;
+  box-shadow: 0 12px 40px #0008;
+}
+
+.titlebar {
+  background: linear-gradient(
+    180deg,
+    #555d68 0%,
+    #353a42 45%,
+    #292d34 100%
+  );
+  color: #f4f7fa;
+  border-bottom: 1px solid #17191c;
+}
+
+.menu-bar {
+  background: #292c31;
+  color: #dce2e9;
+  border-bottom: 1px solid #454b54;
+}
+
+.player-shell,
+.main-pane,
+.library-panel {
+  background: #22252a;
+  color: #e0e5eb;
+}
+
+.sidebar {
+  background: #1b1e22;
+  border-right: 1px solid #41464e;
+}
+
+.sidebar a {
+  color: #aebdce;
+}
+
+.sidebar a.selected,
+.sidebar a:hover {
+  background: #343b44;
+  color: #ffffff;
+}
+
+.now-playing,
+.now-info,
+.visualizer {
+  background: #191c20;
+  border-color: #454b54;
+}
+
+.now-info-heading,
+.library-heading {
+  background: linear-gradient(#414750, #2b2f36);
+  color: #f0f4f8;
+}
+
+.track-strip,
+.library-subhead {
+  background: #2c3036;
+  color: #b8c4d2;
+  border-color: #454b54;
+}
+
+.player-status {
+  background: #17191c;
+  color: #a9c9e8;
+  border-color: #41464e;
+}
+
+button {
+  background: linear-gradient(#484e57, #30353c);
+  color: #f0f4f8;
+  border: 1px solid #626b77;
+}
+
+button:hover {
+  background: linear-gradient(#5a6470, #3c4652);
+}
+
+input[type="range"] {
+  accent-color: #9bbbd8;
+}
+
+footer {
+  color: #aeb7c2;
+}
+
+footer a {
+  color: #b9d8f5;
+}
+
