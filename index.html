@@ -14,39 +14,29 @@
   <link rel="stylesheet" href="library-ui.css">
 
   <style>
-    /* MilkDrop visualizer — monochrome Aero */
+    /* ===== MONOCHROME MILKDROP PANE ===== */
+
     #visualizer {
       position: relative;
       overflow: hidden;
       isolation: isolate;
       background: #000;
+      border: 2px solid #555;
+      box-sizing: border-box;
     }
 
     #milkdrop-canvas {
-     position: absolute;
-     inset: 0;
-     display: block;
-     width: 100%;
-     height: 100%;
-     background: #000;
-     filter: grayscale(1) contrast(1.12);
-     z-index: 1;
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      filter: grayscale(1) contrast(1.12);
+      z-index: 1;
     }
 
-    @keyframes rainbow-flash {
-     0%, 17%, 23%, 48%, 54%, 76%, 82%, 100% {
-     filter: grayscale(1) contrast(1.12);
-     }
-
-     19%, 21%, 50%, 52%, 78%, 80% {
-     filter: grayscale(0) hue-rotate(0deg) saturate(2.4) contrast(1.2);
-     }
-
-     20%, 51%, 79% {
-     filter: grayscale(0) hue-rotate(180deg) saturate(2.8) contrast(1.25);
-     }
-    }
-
+    /* No artwork or GIF over the MilkDrop canvas */
     #visualizer-gif,
     #visualizer-cover {
       display: none !important;
@@ -59,22 +49,70 @@
       pointer-events: none;
     }
 
+    /* Hide all preset names and status text */
     #milkdrop-status {
+      display: none !important;
+    }
+
+    /* ===== MOVING RAINBOW BORDER ===== */
+
+    #visualizer::after {
+      content: "";
       position: absolute;
-      left: 8px;
-      bottom: 7px;
-      z-index: 3;
-      max-width: calc(100% - 16px);
-      overflow: hidden;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 4px 6px;
-      font: 10px Tahoma, sans-serif;
-      letter-spacing: 1px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      inset: 0;
+      padding: 2px;
+      z-index: 5;
       pointer-events: none;
+
+      background: linear-gradient(
+        90deg,
+        #ff1744,
+        #ff9100,
+        #ffee58,
+        #00e676,
+        #00e5ff,
+        #2979ff,
+        #d500f9,
+        #ff1744
+      );
+
+      background-size: 300% 100%;
+      background-position: 0% 50%;
+
+      opacity: 0;
+      transition: opacity .25s ease;
+
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    /* Border animates only during playback */
+    #visualizer.is-playing::after {
+      opacity: 1;
+      animation: rainbow-border-flow 4s linear infinite;
+    }
+
+    @keyframes rainbow-border-flow {
+      from {
+        background-position: 0% 50%;
+      }
+
+      to {
+        background-position: 300% 50%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #visualizer.is-playing::after {
+        animation-duration: 12s;
+      }
     }
   </style>
 </head>
@@ -137,7 +175,7 @@
               <div class="visualizer-overlay"></div>
 
               <div id="milkdrop-status">
-                visualizer but u havent played anything yet u imbecile.
+                indy's_dream.exe
               </div>
             </div>
 
@@ -358,6 +396,18 @@
       status.textContent = message;
     }
 
+    /* Keep border synced to playback state */
+    function syncVisualizerBorder() {
+      pane.classList.toggle(
+        "is-playing",
+        !audio.paused && !audio.ended
+      );
+    }
+
+    audio.addEventListener("play", syncVisualizerBorder);
+    audio.addEventListener("pause", syncVisualizerBorder);
+    audio.addEventListener("ended", syncVisualizerBorder);
+
     function resizeVisualizer() {
       if (!visualizer) return;
 
@@ -410,10 +460,8 @@
 
       try {
         visualizer.loadPreset(presets[name], 3.5);
-        setStatus("MILKDROP // " + name.toUpperCase());
       } catch (error) {
         console.error("MilkDrop preset failed:", error);
-        setStatus("MILKDROP // PRESET ERROR");
       }
     }
 
@@ -475,11 +523,8 @@
 
         await audioContext.resume();
         startRendering();
-
-        setStatus("MILKDROP // PLAYING");
       } catch (error) {
         console.error("MilkDrop initialization failed:", error);
-        setStatus("MILKDROP // UNAVAILABLE");
       }
     }
 
@@ -491,7 +536,6 @@
       try {
         await audioContext.resume();
         startRendering();
-        setStatus("MILKDROP // PLAYING");
       } catch (error) {
         console.error("Could not start MilkDrop:", error);
       }
@@ -514,7 +558,7 @@
       }
     });
 
-    setStatus("indy's_dream.exe");
+    syncVisualizerBorder();
   </script>
 
 </body>
