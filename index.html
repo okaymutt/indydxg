@@ -23,14 +23,30 @@
     }
 
     #milkdrop-canvas {
-      position: absolute;
-      inset: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      filter: grayscale(1) contrast(1.12);
-      z-index: 1;
+     position: absolute;
+     inset: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: #000;
+     filter: grayscale(1) contrast(1.12);
+     z-index: 1;
+
+    animation: rainbow-flash 13s infinite;
+    }
+
+    @keyframes rainbow-flash {
+     0%, 17%, 23%, 48%, 54%, 76%, 82%, 100% {
+     filter: grayscale(1) contrast(1.12);
+     }
+
+     19%, 21%, 50%, 52%, 78%, 80% {
+     filter: grayscale(0) hue-rotate(0deg) saturate(2.4) contrast(1.2);
+     }
+
+     20%, 51%, 79% {
+     filter: grayscale(0) hue-rotate(180deg) saturate(2.8) contrast(1.25);
+     }
     }
 
     #visualizer-gif,
