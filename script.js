@@ -82,7 +82,7 @@ const releases = [
     title: "the stars are falling",
     type: "MIXTAPE",
     year: "2025",
-    cover: "20251013_224552_oneworld%20alt%20cover.PNG",
+    cover: "images/20251013_224552_oneworld%20alt%20cover.PNG",
     tracks: [
     ]
   },
@@ -113,7 +113,14 @@ const releases = [
       { title: "the myth xf sisyphus.", src: "music/the%20world%20doesn't%20care/the%20myth%20of%20sisyphus.mp3", format: "MP3", durationNote: "" }
     ]
   },
-
+  {
+    title: "solitary",
+    type: "MIXTAPE",
+    year: "2025",
+    cover: "coverarts/solitary%20cover%20art.png",
+    tracks: [
+    ]
+  },
   {
     title: "12 mutts",
     type: "EP",
@@ -152,7 +159,7 @@ const releases = [
     title: "hocus pocus",
     type: "MIXTAPE",
     year: "2024",
-    cover: "digicamfx-collage-2026-10-18T08-41-03.jpg",
+    cover: "images/digicamfx-collage-2026-10-18T08-41-03.jpg",
     tracks: [
     ]
   }
