@@ -39,7 +39,7 @@ const releases = [
 
   {
     title: "clearly brxken",
-    type: "ALBUM",
+    type: "MIXTAPE",
     year: "2025",
     cover: "coverarts/clearly%20brxken%20art.png",
     tracks: [
@@ -147,8 +147,15 @@ const releases = [
       { title: "WAZZUUUP?!?!", src: "music/wazzuuupsong.mp3", format: "MP3", durationNote: "" },
       { title: "UNDERWXRLD_SXAR.", src: "music/underworldsoar.mp3", format: "MP3", durationNote: "" }
     ]
+  },
+  {
+    title: "hocus pocus",
+    type: "MIXTAPE",
+    year: "2024",
+    cover: "digicamfx-collage-2026-10-18T08-41-03.jpg",
+    tracks: [
+    ]
   }
-
 ];
 
 const audio = document.getElementById("audio");
