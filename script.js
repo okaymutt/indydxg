@@ -78,7 +78,15 @@ const releases = [
       { title: "xne wxrld.", src: "music/oneworld.mp3", format: "MP3", durationNote: "" }
     ]
   },
-
+  {
+    title: "the stars are falling",
+    type: "MIXTAPE",
+    year: "2025",
+    cover: "20251013_224552_oneworld%20alt%20cover.PNG",
+    tracks: [
+    ]
+  },
+  
   {
     title: "the world doesn't care",
     type: "ALBUM",
