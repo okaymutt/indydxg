@@ -12,7 +12,7 @@ const releases = [
     title: "nxdus txllens",
     type: "ALBUM",
     year: "2026",
-    cover: "coverarts/nxdus%20txllens%20cover%20art.png",
+    cover: "coverarts/coverarts/digicamfx-collage-2026-10-22T04-16-27.jpg",
     tracks: [
       { title: "jumpxut.", src: "music/jumpxut.mp3", format: "MP3", durationNote: "" },
       { title: "feng shui.", src: "music/shui.mp3", format: "MP3", durationNote: "" },
